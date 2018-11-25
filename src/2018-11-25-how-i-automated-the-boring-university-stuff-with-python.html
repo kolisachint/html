@@ -9,8 +9,8 @@
             font-weight: 400;
             line-height: 2.2;
             margin-left: 20%;
-            width: 80%;
-            max-width: 80%;
+            width: 60%;
+            max-width: 60%;
         }
         span { 
             font-size: 300%;
@@ -115,7 +115,14 @@
 <ul>
 <li>The Script Editor is for Google Scripts, that lets you create JavaScript functions to perform while using Google apps APIs. Here is a sample code snippet you can use. Note that we’ll be using the indexes for the same template</li>
 </ul>
-<pre><code>var cal = CalendarApp.getDefaultCalendar();var dayOffset = 0; // replace this with the loop indexvar currSheet = SpreadsheetApp.getActiveSheet(); // gets the currently active sheetvar startTimeString = currSheet.getRange(row, column).getValue() // replace row and column with desired valuesvar startTime = new Date(startTimeString);startTime.setDate(startTime.getDate() + dayOffset);var endTime = new Date(startTimeString);endTime.setDate(startTime.getHour() + 1);var title = currSheet.getRange(row, column).getValue(); // specify the row and column of the cellcal.createEvent(title, startTime, endTime); // creates the event in calendar and syncs it
+<pre><code>var cal = CalendarApp.getDefaultCalendar();
+var dayOffset = 0;// replace this with the loop indexvar 
+currSheet = SpreadsheetApp.getActiveSheet(); // gets the currently active sheet
+var startTimeString = currSheet.getRange(row, column).getValue() // replace row and column with desired values
+var startTime = new Date(startTimeString);startTime.setDate(startTime.getDate() + dayOffset);
+var endTime = new Date(startTimeString);endTime.setDate(startTime.getHour() + 1);
+var title = currSheet.getRange(row, column).getValue(); // specify the row and column of the cell
+cal.createEvent(title, startTime, endTime); // creates the event in calendar and syncs it
 </code></pre>
 
 <ul>
