@@ -17,8 +17,12 @@ TEMPLATE = """<!DOCTYPE html>
             font-weight: 400;
             line-height: 2.2;
             margin-left: 20%;
+            margin-right: 20%;
             width: 60%;
             max-width: 60%;
+        }
+       img {
+           width: 100%;
         }
         span { 
             font-size: 300%;
