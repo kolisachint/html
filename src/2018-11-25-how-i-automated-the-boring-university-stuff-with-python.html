@@ -9,7 +9,7 @@
             font-weight: 400;
             line-height: 2.2;
             vertical-align: middle;
-            max-width: 500px;
+            max-width: 80%;
             margin-left: 20%;
         }
         h3::first-letter { 
@@ -79,7 +79,10 @@
 <li>Next thing to do was sync it with the <a href="https://developers.google.com/calendar/">Google Calendar API</a>. The documentation is on — point and pretty easy to understand and implement. The <a href="https://developers.google.com/calendar/quickstart/python">quickstart guide</a> is more than enough to get started.</li>
 <li>Wrote some lines of code that do sanity checks, and finally, request the google calendar API by creating an event, and the code looked like this.</li>
 </ul>
-<pre><code># Refer to the Python quickstart on how to setup the environment:# https://developers.google.com/calendar/quickstart/python# Change the scope to 'https://www.googleapis.com/auth/calendar' and delete any# stored credentials.event = {  'summary': 'Data Structures Assignment - 1',  'description': 'Theory Assessment',  'start': {    'dateTime': '2018-03-28T09:17:30+05:30',     'timeZone': 'Asia/Kolkata', # my timezone  },  'end': {    'dateTime': '2018-03-28T17:18:30+05:30', # 12 midnight is the deadline    'timeZone': 'Asia/Kolkata',  },  'recurrence': [    'RRULE:FREQ=DAILY;COUNT=1'  ],  'reminders': {    'useDefault': False,    'overrides': [      {'method': 'email', 'minutes': 24 * 60}, # a day before start      {'method': 'popup', 'minutes': 100}, # 100 minutes before start    ],  },}event = service.events().insert(calendarId='primary', body=event).execute()print 'Event created: %s' % (event.get('htmlLink'))
+<pre><code># Refer to the Python quickstart on how to setup the environment:
+# https://developers.google.com/calendar/quickstart/python
+# Change the scope to 'https://www.googleapis.com/auth/calendar' and delete any
+# stored credentials.event = {  'summary': 'Data Structures Assignment - 1',  'description': 'Theory Assessment',  'start': {    'dateTime': '2018-03-28T09:17:30+05:30',     'timeZone': 'Asia/Kolkata', # my timezone  },  'end': {    'dateTime': '2018-03-28T17:18:30+05:30', # 12 midnight is the deadline    'timeZone': 'Asia/Kolkata',  },  'recurrence': [    'RRULE:FREQ=DAILY;COUNT=1'  ],  'reminders': {    'useDefault': False,    'overrides': [      {'method': 'email', 'minutes': 24 * 60}, # a day before start      {'method': 'popup', 'minutes': 100}, # 100 minutes before start    ],  },}event = service.events().insert(calendarId='primary', body=event).execute()print 'Event created: %s' % (event.get('htmlLink'))
 </code></pre>
 
 <ul>
