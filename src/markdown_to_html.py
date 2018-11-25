@@ -16,13 +16,9 @@ TEMPLATE = """<!DOCTYPE html>
             font-size: 18px;
             font-weight: 400;
             line-height: 2.2;
-            vertical-align: middle;
-        }
-        div {
+            margin-left: 20%;
+            width: 60%;
             max-width: 60%;
-        }
-        h3::first-letter { 
-            font-size: 100%;
         }
         span { 
             font-size: 300%;
@@ -34,7 +30,7 @@ TEMPLATE = """<!DOCTYPE html>
           border-left: 10px solid #ccc;
           margin: 1.5em 10px;
           padding: 0.5em 10px;
-          quotes: "\201C""\201D""\2018""\2019";
+          quotes: "C""D""8""9";
         }
         pre, blockquote p {
           line-height: 2.2;
@@ -44,7 +40,7 @@ TEMPLATE = """<!DOCTYPE html>
     </style>
 </head>
 <body>
-<div class="container" style="width:60%">
+<div class="container">
 {{content}}
 </div>
 </body>
