@@ -40,7 +40,7 @@ TEMPLATE = """<!DOCTYPE html>
     </style>
 </head>
 <body>
-<div class="container">
+<div class="container" style="width:100%;max-width: 100%;">
 {{content}}
 </div>
 </body>
