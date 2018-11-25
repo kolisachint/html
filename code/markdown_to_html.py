@@ -16,6 +16,10 @@ TEMPLATE = """<!DOCTYPE html>
             font-size: 18px;
             font-weight: 400;
             line-height: 2.2;
+            vertical-align: middle;
+        }
+        div {
+            max-width: 60%;
         }
         h3::first-letter { 
             font-size: 100%;
@@ -25,14 +29,14 @@ TEMPLATE = """<!DOCTYPE html>
             font-weight: 600;
             line-height: 1;
         }
-        blockquote {
+        pre, blockquote {
           background: #f9f9f9;
           border-left: 10px solid #ccc;
           margin: 1.5em 10px;
           padding: 0.5em 10px;
           quotes: "\201C""\201D""\2018""\2019";
         }
-        blockquote p {
+        pre, blockquote p {
           line-height: 2.2;
           font-size: 18px;
           font-weight: 400;
